@@ -1,0 +1,40 @@
+.todolist {
+  margin: 0 auto;
+  width: 500px;
+  padding: 24px;
+  background-color: rgba(39, 113, 173, 0.322);
+}
+
+.todolist ul {
+  list-style: none;
+}
+
+.todolist ul li {
+  margin-bottom: 12px;
+  color: orange;
+}
+
+.todolist ul li .status {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.todolist ul li .status:hover {
+  cursor: pointer;
+}
+
+.todolist ul li .status.active {
+  background-color: #0e1853;
+}
+
+.todolist ul li .li {
+  margin-right: 8px;
+}
+
+.todolist ul li .num {
+  color: red;
+}
