@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import logo from './logo.svg';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import {useCountDown, useLatest} from './hooks'
+import {useCountDown, useLatest, useTimeout} from './hooks'
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
     }
   })
   function handleAlertClick() {
+    // useTimeout(()=> alert(`Latest count value: ${latestCount.current} ${count}`),1000)
     setTimeout(() => {
       alert(`Latest count value: ${latestCount.current} ${count}`);
     }, 3000);
