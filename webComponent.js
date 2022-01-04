@@ -1,5 +1,5 @@
 const template = document.createElement('template')
-template.setAttribute('id', 'userCardTemplate2')
+// template.setAttribute('id', 'userCardTemplate2')
 template.innerHTML = `
 <style>
 :host {
@@ -57,20 +57,20 @@ template.innerHTML = `
 </div>
 `
 
-
+//引入自定义组件
 class UserCard2 extends HTMLElement {
   constructor() {
     super()
 
     const shadow = this.attachShadow({'mode': 'closed'})
-    var templateElem = document.getElementById('userCardTemplate2');
-    var content = templateElem.content.cloneNode(true);
-    content.querySelector('img').setAttribute('src', this.getAttribute('image'));
-    content.querySelector('.container>.name').innerText = this.getAttribute('name');
-    content.querySelector('.container>.email').innerText = this.getAttribute('email');
+    // var templateElem = document.getElementById('userCardTemplate2');
+    // var content = templateElem.content.cloneNode(true);
+    template.content.querySelector('img').setAttribute('src', this.getAttribute('image'));
+    template.content.querySelector('.container>.name').innerText = this.getAttribute('name');
+    template.content.querySelector('.container>.email').innerText = this.getAttribute('email');
 
-    shadow.appendChild(content)
+    shadow.appendChild(template.content.cloneNode(true))
   }
 }
 
-customElements.define('user-card2', UserCard2)
+window.customElements.define('user-card2', UserCard2)

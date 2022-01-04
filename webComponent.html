@@ -15,22 +15,23 @@
       color: red;
     }
   </style>
+
 </head>
 
 <body>
-  <user-card 
+  <!-- <user-card 
     image="https://semantic-ui.com/images/avatar2/large/kristy.png"
     name="User Name"
     email="yourmail@some-email.com"
-  ></user-card>
+  ></user-card> -->
 
-  <user-card 
-  image="https://semantic-ui.com/images/avatar2/large/kristy.png"
-  name="User Namccccccccccccccce"
-  email="yourmail@some-email.com"
+  <user-card2 
+    image="https://semantic-ui.com/images/avatar2/large/kristy.png"
+    name="User Namccccccccccccccce"
+    email="yourmail@some-email.com"
 ></user-card>
 
-  <template id="userCardTemplate">
+  <!-- <template id="userCardTemplate">
     <style>
       /* 这个伪类,指代自定义元素本身 */
       :host {
@@ -86,9 +87,9 @@
       <p class="email"></p>
       <button class="button">Follow</button>
     </div>
-  </template>
+  </template> -->
 
-  <script>
+  <!-- <script>
     class UserCard extends HTMLElement {
       constructor() {
         super();
@@ -112,7 +113,9 @@
       }
     }
     window.customElements.define('user-card', UserCard);
-  </script>
+  </script> -->
+  <script src="./webComponent.js"></script>
+
 </body>
 
 </html>
