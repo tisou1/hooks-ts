@@ -38,3 +38,8 @@
 .todolist ul li .num {
   color: red;
 }
+.colorNum{
+  font-size: 24px;
+  color: orange;
+  font-weight: 700;
+}

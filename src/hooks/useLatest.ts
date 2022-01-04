@@ -5,7 +5,7 @@ import { useRef } from 'react'
  * @returns 
  * 返回当前最新的 Hook, 可以避免闭包,闭包问题经常在,用到setTimeout setInterval,Promise.then出现
  */
-export function useLatest<T>(value: T){
+export default function useLatest<T>(value: T){
   const ref = useRef(value)
   ref.current = value
 

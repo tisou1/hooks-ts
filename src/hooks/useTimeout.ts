@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { useLatest } from "./useLatest";
+import  useLatest  from "./useLatest";
 
 
-export function useTimeout(fn: () => void, delay: number | undefined):void{
+export default function useTimeout(fn: () => void, delay: number | undefined):void{
   const fnRef = useLatest(fn)
 
   useEffect(()=>{

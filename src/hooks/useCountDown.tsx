@@ -1,5 +1,5 @@
 import {useState, useEffect, useMemo, useRef} from 'react'
-import {useLatest} from './useLatest'
+import useLatest from './useLatest'
 import dayjs from 'dayjs'
 
 
@@ -45,7 +45,7 @@ function parseMs(milliseconds:number):FormattedRes {
   
   };
 
-export function useCountDown(props?: Options){
+export default function useCountDown(props?: Options){
     const { targetDate, interval = 1000,onEnd } = props || {}
     const onEndRef = useLatest(onEnd)
 

@@ -2,7 +2,7 @@ import { useMemo, useRef } from 'react'
 
 type noop = (...args: any[]) => any
 
-export function useMemoizedFn<T extends noop>(fn: T){
+export default function useMemoizedFn<T extends noop>(fn: T){
   if(process.env.NODE_ENV === 'development') {
     if(typeof fn !== 'function'){
       console.error(`useMemoizedFn expected parameter is a function, got ${typeof fn}`);
