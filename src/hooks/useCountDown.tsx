@@ -44,7 +44,11 @@ function parseMs(milliseconds:number):FormattedRes {
     }
   
   };
-
+/**
+ * 倒计时,传入时间
+ * @param props 
+ * @returns 
+ */
 export default function useCountDown(props?: Options){
     const { targetDate, interval = 1000,onEnd } = props || {}
     const onEndRef = useLatest(onEnd)
