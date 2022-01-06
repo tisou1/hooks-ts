@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import  useLatest  from "./useLatest";
 
+/**
+ * 组件卸载时执行的 hook
+ * @param fn 
+ */
 function useUnmount(fn: () => void){
   if (process.env.NODE_ENV === 'development') {
     if (typeof fn !== 'function') {

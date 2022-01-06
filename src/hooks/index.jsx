@@ -17,5 +17,9 @@ export { default as useUpdateEffect } from './useUpdateEffect'
 export { default as useThrottleEffect } from './useThrottleEffect'
 
 
+export { default as usePrevious } from './usePrevious'
+export { default as useUnmountedRef }  from './useUnmountedRef' 
+export { default as useSafeState } from './useSafeState'
+
 
 
