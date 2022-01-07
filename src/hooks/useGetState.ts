@@ -33,3 +33,5 @@ function useGetState<S>(initialState?: S) {
     getState
   ]
 }
+
+export default useGetState
