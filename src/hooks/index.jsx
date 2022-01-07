@@ -22,5 +22,10 @@ export { default as useUnmountedRef }  from './useUnmountedRef'
 export { default as useSafeState } from './useSafeState'
 export { default as useGetState } from './useGetState'
 
+export { default as useSet } from './useSet'
+export { default as useMap } from './useMap' 
+export { default as useUpdate } from './useUpdate'
+export { default as useLockFn } from './useLockFn'
+
 
 
