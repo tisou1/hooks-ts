@@ -73,4 +73,4 @@ class UserCard2 extends HTMLElement {
   }
 }
 
-window.customElements.define('user-card2', UserCard2)
+window.customElements.define('user-card11111', UserCard2)

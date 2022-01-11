@@ -28,4 +28,9 @@ export { default as useUpdate } from './useUpdate'
 export { default as useLockFn } from './useLockFn'
 
 
+export { default as useRafState } from './useRafState'
+export { default as useUpdateLayoutEffect } from './useUpdateLayoutEffect'
+export { default as useDeepCompareEffect } from './useDeepCompareEffect'
+
+
 
