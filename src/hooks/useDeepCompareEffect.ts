@@ -14,6 +14,7 @@ function depsEqual(aDeps: DependencyList, bDeps: DependencyList = []){
  */
 function useDeepCompareEffect(effect:  EffectCallback, deps: DependencyList) {
   const ref = useRef<DependencyList>()
+  //主要来控制 依赖项更新
   const signalRef = useRef<number>(0)
 
   if(!depsEqual(deps, ref.current)){
