@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import createUpdateEffect from "../hooks/createUpdateEffect";
+import createEffectWithTarget from "./createEffectWithTarget";
 
-const useEffectWitchTarget = createUpdateEffect(useEffect)
+const useEffectWitchTarget = createEffectWithTarget(useEffect)
 
 export default useEffectWitchTarget
