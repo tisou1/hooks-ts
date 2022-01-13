@@ -34,7 +34,12 @@ export { default as useDeepCompareEffect } from './useDeepCompareEffect'
 
 
 /* dom相关 */
+export { default as useEventListener } from './useEventListener'
 
+
+/** 调试 */
+export { default as useTrackedEffect } from './useTrackedEffect'
+export { default as useWhyDidYouUpdate } from './useWhyDidYouUpdate'
 
 
 
