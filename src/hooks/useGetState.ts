@@ -21,7 +21,7 @@ function useGetState<S = undefined>():[
 
 
 function useGetState<S>(initialState?: S) {
-  const [state, setState] = useState()
+  const [state, setState] = useState(initialState)
   const stateRef = useLatest(state)
 
 
