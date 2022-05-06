@@ -41,5 +41,8 @@ export { default as useEventListener } from './useEventListener'
 export { default as useTrackedEffect } from './useTrackedEffect'
 export { default as useWhyDidYouUpdate } from './useWhyDidYouUpdate'
 
+//
+export { default as useClickSelect } from './useClickSelect'
+
 
 

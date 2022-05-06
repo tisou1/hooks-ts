@@ -14,5 +14,4 @@ function useMount(fn: () => void){
     fn?.()
   },[])
 }
-
 export default useMount
