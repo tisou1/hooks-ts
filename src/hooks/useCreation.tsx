@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import type { DependencyList } from 'react'
+import deepEqual from '../utils/depsAreSame'
 
 /**
  * useCreation 是 useMemo 或 useRef 的替代品。
@@ -9,16 +10,6 @@ import type { DependencyList } from 'react'
 
    参数和useMemo一样，只是返回的值不一样
  */
-
-const deepEqual = (oldDeps: DependencyList, deps: DependencyList): boolean => {
-  if (oldDeps === deps) return true
-
-  for (let i = 0; i < oldDeps.length; i++) {
-    if (!Object.is(oldDeps[i], deps[i])) return false
-  }
-
-  return true
-}
 
 export default function useCreation<T>(
   fn: () => T,
