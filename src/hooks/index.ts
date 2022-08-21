@@ -35,7 +35,7 @@ export { default as useDeepCompareEffect } from './useDeepCompareEffect'
 
 /* dom相关 */
 export { default as useEventListener } from './useEventListener'
-
+export { default as useHover } from './useHover'
 
 /** 调试 */
 export { default as useTrackedEffect } from './useTrackedEffect'

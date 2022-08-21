@@ -1,6 +1,12 @@
-import React,{useState} from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { useReactive, useLatest, usePrevious } from './hooks'
+import React, { useState, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  useReactive,
+  useLatest,
+  usePrevious,
+  useHover,
+  useEventListener
+} from './hooks'
 
 function App() {
 
@@ -10,7 +16,7 @@ function App() {
     flag: true,
     arr: [],
     bugs: ['小杜杜', 'react', 'hook'],
-    addBug(bug:string) {
+    addBug(bug: string) {
       this.bugs.push(bug);
     },
     get bugsCount() {
@@ -18,14 +24,34 @@ function App() {
     },
   })
 
-  const  [count, setCount] = useState(0)
+  const [count, setCount] = useState(0)
   const l = useLatest(count)
   const p = usePrevious(count)
 
+  const r1 = useRef<any>(null)
+  const r2 = useRef<any>(null)
+
+  useEventListener('click', () => {
+    console.log('r1点击')
+  }, {
+    target: r1
+  })
+
+  useHover(r2, {
+    onEnter: () => {
+      console.log('onEnter');
+    },
+    onLeave: () => {
+      console.log('onLeave');
+    },
+    onChange: isHover => {
+      console.log('onChange', isHover);
+    },
+  })
   return (
     <div>
-      <p>count:{count}</p>
-      <p>count:{l.current}</p>
+      <p ref={r1}>count:{count}</p>
+      <p ref={r2}>count:{l.current}</p>
       <p>usePrevious count:{p}</p>
       <button onClick={() => setCount(count + 1)}>增加</button>
     </div>
