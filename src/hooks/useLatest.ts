@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 /**
  * 
  * @param value 
@@ -9,7 +9,6 @@ export default function useLatest<T>(value: T){
   const ref = useRef(value)
   ref.current = value
 
-  //使用useEffect更新ref,也可以
   return ref
 }
 
