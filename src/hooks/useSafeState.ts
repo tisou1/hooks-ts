@@ -4,7 +4,7 @@ import type { Dispatch, SetStateAction } from 'react';
 
 /**
  * 
- * 使用安全的state, 组件卸载后不会进行state的更新,放置内存泄漏
+ * 使用安全的state, 组件卸载后不会进行state的更新,防止内存泄漏
  * 用法和useState一样
  * @param initialState 
  */
@@ -17,7 +17,7 @@ function useSafeState<S>(initialState?: S | (() => S)) {
   const unmounted = useUnmountedRef()
   const [state, setState] = useState(initialState)
 
-  const setCurrentState = useCallback((setCurrentState) => {
+  const setCurrentState = useCallback((setCurrentState: S) => {
     if(unmounted.current) return
     setState(setCurrentState)
   },[])
