@@ -4,8 +4,8 @@
   "private": true,
   "packageManager": "pnpm@7.9.3",
   "dependencies": {
-    "@types/node": "^18.7.8",
-    "@types/react": "^18.0.17",
+    "@types/node": "^18.7.14",
+    "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "ahooks": "^3.7.0",
     "dayjs": "^1.11.5",
@@ -15,7 +15,7 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "redux": "^4.2.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.2"
   },
   "scripts": {
     "dev": "vite --port 3333",
