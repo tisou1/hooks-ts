@@ -1,5 +1,5 @@
 import type { MutableRefObject } from "react";
-import isBrowser from "./isBrowser";
+import { isBrowser } from "./index";
 
 type TargetValue<T> = T | undefined | null
 

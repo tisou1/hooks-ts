@@ -15,6 +15,7 @@ export default function useMemoizedFn<T extends noop>(fn: T){
 
   const memoizedFn = useRef<T>();
   if(!memoizedFn.current){
+    //在render阶段更新memoizedFn的引用
     memoizedFn.current = function (...args){
       return fnRef.current.apply(args)
     } as T
