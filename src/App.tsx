@@ -5,7 +5,8 @@ import {
   useLatest,
   usePrevious,
   useHover,
-  useEventListener
+  useEventListener,
+  useBattery
 } from './hooks'
 
 function App() {
@@ -48,12 +49,19 @@ function App() {
       console.log('onChange', isHover);
     },
   })
+
+  const batteryState = useBattery()
   return (
     <div>
       <p ref={r1}>count:{count}</p>
       <p ref={r2}>count:{l.current}</p>
       <p>usePrevious count:{p}</p>
       <button onClick={() => setCount(count + 1)}>增加</button>
+      <pre>
+        {
+          JSON.stringify(batteryState, null, 2)
+        }
+      </pre>
     </div>
   );
 }

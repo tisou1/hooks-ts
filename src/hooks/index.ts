@@ -50,5 +50,9 @@ export { default as useCreation } from './useCreation'
 export { default as useReactive } from './useReactive'
 // export { default as useEventListener } from './useEventListener'
 
+
+//传感器
+
+export { default as useBattery } from './useBattery'
  
 
