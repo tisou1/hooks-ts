@@ -54,5 +54,5 @@ export { default as useReactive } from './useReactive'
 //传感器
 
 export { default as useBattery } from './useBattery'
- 
+export { default as useKey } from './useKey'
 

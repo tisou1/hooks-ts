@@ -6,7 +6,8 @@ import {
   usePrevious,
   useHover,
   useEventListener,
-  useBattery
+  useBattery,
+  useKey
 } from './hooks'
 
 function App() {
@@ -51,6 +52,11 @@ function App() {
   })
 
   const batteryState = useBattery()
+
+  useKey('a', () => {
+    console.log('按下了按键a')
+  })
+  
   return (
     <div>
       <p ref={r1}>count:{count}</p>
